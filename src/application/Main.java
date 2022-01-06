@@ -1,24 +1,36 @@
 package application;
 	
 import javafx.application.Application;
-import javafx.stage.Stage;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.control.ScrollPane;
+import javafx.stage.Stage;
 
 
 public class Main extends Application {
+	private static Scene mainscene;
+	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			BorderPane root = new BorderPane();
-			Scene scene = new Scene(root,400,400);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/TelaPrincipal.fxml"));
+			ScrollPane scroll = loader.load();
+			
+			scroll.setFitToHeight(true);
+			scroll.setFitToWidth(true);
+			
+			mainscene = new Scene(scroll);
+			primaryStage.setScene(mainscene);
+			primaryStage.setTitle("gerenciador de armazem");
 			primaryStage.show();
+			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-	}
+		
+	}public static Scene getMainScene() {
+			return mainscene;
+		}
 	
 	public static void main(String[] args) {
 		launch(args);

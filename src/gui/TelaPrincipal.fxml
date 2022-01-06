@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="694.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.TelaPrincipalController">
+   <content>
+      <VBox prefHeight="521.0" prefWidth="691.0">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="Vendas">
+                  <items>
+                    <MenuItem fx:id="menuItemCadastrarVendas" mnemonicParsing="false" text="cadastrar vendas" />
+                        <MenuItem fx:id="menuItemBuscarVendas" mnemonicParsing="false" text="buscar vendas" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Produtos">
+                  <items>
+                        <MenuItem fx:id="menuItemBuscarProdutos" mnemonicParsing="false" text="buscar produtos" />
+                        <MenuItem fx:id="menuItemCadastrarProdutos" mnemonicParsing="false" text="CadastrarProduto" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Estoque">
+                  <items>
+                    <MenuItem fx:id="menuItemCadastrarEstoque" mnemonicParsing="false" text="cadastrar itens no estoque" />
+                        <MenuItem fx:id="menuItemBuscarEstoque" mnemonicParsing="false" text="buscar itens no estoque" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Fornecedores">
+                    <items>
+                      <MenuItem fx:id="menuItemCadastrarForncedores" mnemonicParsing="false" text="cadastrar fornecedor" />
+                        <MenuItem fx:id="menuItemBuscarFornecedores" mnemonicParsing="false" text="buscar fornecedor" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Agenda de Compromisso">
+                    <items>
+                      <MenuItem fx:id="menuItemAgendarEvento" mnemonicParsing="false" text="agendar evento" />
+                        <MenuItem fx:id="menuItemVisualizarEvento" mnemonicParsing="false" text="visualizar eventos" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Relatorios">
+                    <items>
+                        <MenuItem fx:id="menuItemRelatorioVendas" mnemonicParsing="false" text="relatorio de vendas" />
+                      <MenuItem fx:id="menuItemRelatorioProduto" mnemonicParsing="false" text="relatorio de produtos" />
+                        <MenuItem fx:id="menuItemRelatorioFornecedor" mnemonicParsing="false" text="relatorio de fornecedores" />
+                        <MenuItem fx:id="menuItemRelatorioEstoque" mnemonicParsing="false" text="relatorio de estoque" />
+                    </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+            <Button fx:id="btCadastrarVenda" lineSpacing="10.0" mnemonicParsing="false" onAction="#onbtCadastrarVenda" prefHeight="50.0" prefWidth="196.0" text="cadastrar nova venda">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="40.0" top="50.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Bookshelf Symbol 7" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btCancelarVenda" lineSpacing="10.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="199.0" text="cancelar venda">
+               <VBox.margin>
+                  <Insets left="40.0" top="30.0" />
+               </VBox.margin>
+            </Button>
+            <HBox prefHeight="228.0" prefWidth="691.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets top="50.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="quantidade de produtos vendidos no dia ">
+                     <HBox.margin>
+                        <Insets left="50.0" top="100.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Book Antiqua" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="=">
+                     <HBox.margin>
+                        <Insets left="20.0" top="100.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label>
+                     <HBox.margin>
+                        <Insets left="20.0" top="100.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Book Antiqua" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>
