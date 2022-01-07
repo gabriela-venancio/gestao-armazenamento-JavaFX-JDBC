@@ -7,7 +7,7 @@ public class Produto {
 	String tempoEstoque;
 	int tipo;
 	int fornecedor;
-	int quantidade;
+int quantidade;
 	
 	
 }

@@ -21,6 +21,7 @@ public class ListaEstoqueController implements Initializable {
 	@FXML
 	private TableView<Estoque>tabelaListaEstoque;
 	
+	
 	@FXML
 	private TableColumn<Estoque, String>TabelaColumnaNomeProduto;
 	
