@@ -1,4 +1,4 @@
-package gui;
+package alerts;
 
 import java.util.Optional;
 

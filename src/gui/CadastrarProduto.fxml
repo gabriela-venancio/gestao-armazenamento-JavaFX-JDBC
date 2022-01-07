@@ -9,7 +9,7 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="691.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.CadastroVendaController">
    <children>
-      <Label alignment="CENTER" lineSpacing="10.0" text="Cadastrar Venda" textAlignment="CENTER" underline="true">
+      <Label alignment="CENTER" lineSpacing="10.0" text="Cadastrar Produto" textAlignment="CENTER" underline="true">
          <font>
             <Font name="Bookshelf Symbol 7" size="27.0" />
          </font>
@@ -27,7 +27,7 @@
             <Insets left="100.0" right="300.0" top="10.0" />
          </VBox.margin>
       </TextField>
-      <TextField promptText="DataDaVenda">
+      <TextField promptText="Tempo no Estoque">
          <VBox.margin>
             <Insets left="100.0" right="300.0" top="10.0" />
          </VBox.margin>
@@ -37,12 +37,7 @@
             <Insets left="100.0" right="300.0" top="10.0" />
          </VBox.margin>
       </TextField>
-      <TextField promptText="Valor vendido">
-         <VBox.margin>
-            <Insets left="100.0" right="300.0" top="10.0" />
-         </VBox.margin>
-      </TextField>
-      <TextField promptText="CPF Cliente">
+      <TextField promptText="Fornecedor">
          <VBox.margin>
             <Insets left="100.0" right="300.0" top="10.0" />
          </VBox.margin>

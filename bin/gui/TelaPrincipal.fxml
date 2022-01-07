@@ -13,32 +13,32 @@
 
 <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="694.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.TelaPrincipalController">
    <content>
-      <VBox prefHeight="521.0" prefWidth="691.0">
+      <VBox prefHeight="900" prefWidth="1100">
          <children>
             <MenuBar>
               <menus>
                 <Menu mnemonicParsing="false" text="Vendas">
                   <items>
-                    <MenuItem fx:id="menuItemCadastrarVendas" mnemonicParsing="false" text="cadastrar vendas" />
-                        <MenuItem fx:id="menuItemBuscarVendas" mnemonicParsing="false" text="buscar vendas" />
+                    <MenuItem fx:id="menuItemCadastrarVendas" mnemonicParsing="false" onAction="#onbtCadastrarVenda" text="cadastrar vendas" />
+                        <MenuItem fx:id="menuItemBuscarVendas" mnemonicParsing="false" onAction="#onbtListaVendaAction" text="buscar vendas" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Produtos">
                   <items>
-                        <MenuItem fx:id="menuItemBuscarProdutos" mnemonicParsing="false" text="buscar produtos" />
-                        <MenuItem fx:id="menuItemCadastrarProdutos" mnemonicParsing="false" text="CadastrarProduto" />
+                        <MenuItem fx:id="menuItemBuscarProdutos" mnemonicParsing="false" onAction="#onbtListaProdutoAction" text="buscar produtos" />
+                        <MenuItem fx:id="menuItemCadastrarProdutos" mnemonicParsing="false" onAction="#onbtCadastrarProdutoAction" text="CadastrarProduto" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Estoque">
                   <items>
-                    <MenuItem fx:id="menuItemCadastrarEstoque" mnemonicParsing="false" text="cadastrar itens no estoque" />
-                        <MenuItem fx:id="menuItemBuscarEstoque" mnemonicParsing="false" text="buscar itens no estoque" />
+                    <MenuItem fx:id="menuItemCadastrarEstoque" mnemonicParsing="false" onAction="#onbtCadastrarEstoqueAction" text="cadastrar itens no estoque" />
+                        <MenuItem fx:id="menuItemBuscarEstoque" mnemonicParsing="false" onAction="#onbtListaEstoqueAction" text="buscar itens no estoque" />
                   </items>
                 </Menu>
                   <Menu mnemonicParsing="false" text="Fornecedores">
                     <items>
-                      <MenuItem fx:id="menuItemCadastrarForncedores" mnemonicParsing="false" text="cadastrar fornecedor" />
-                        <MenuItem fx:id="menuItemBuscarFornecedores" mnemonicParsing="false" text="buscar fornecedor" />
+                      <MenuItem fx:id="menuItemCadastrarForncedores" mnemonicParsing="false" onAction="#onbtCadastrarFornecedor" text="cadastrar fornecedor" />
+                        <MenuItem fx:id="menuItemBuscarFornecedores" mnemonicParsing="false" onAction="#onbtListaFornecedorAction" text="buscar fornecedor" />
                     </items>
                   </Menu>
                   <Menu mnemonicParsing="false" text="Agenda de Compromisso">

@@ -1,4 +1,4 @@
-package gui;
+package alerts;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
