@@ -36,20 +36,19 @@
               </items>
             </MenuButton>
             <TextField prefHeight="25.0" prefWidth="295.0" promptText="O que Procura?" />
-            <Button mnemonicParsing="false" text="Pesquisar" />
+            
          </items>
       </ToolBar>
-      <TableView prefHeight="374.0" prefWidth="712.0">
+      <TableView fx:id="tabelaListaEstoque" prefHeight="374.0" prefWidth="712.0">
         <columns>
-          <TableColumn prefWidth="46.666685700416565" text="Codigo" />
-          <TableColumn prefWidth="109.33330917358398" text="Nome do Produto " />
-            <TableColumn prefWidth="61.33326721191406" text="Tipo" />
-            <TableColumn prefWidth="100.66664123535156" text="Data da Compra" />
-            <TableColumn prefWidth="88.0" text="Valor Vendido" />
-            <TableColumn prefWidth="97.333251953125" text="Valor Comprado" />
-            <TableColumn prefWidth="84.66665649414062" text="Quantidade" />
-            <TableColumn prefWidth="119.3333740234375" text="Tempo no Estoque" />
-            <TableColumn prefWidth="92.6666259765625" text="Fornecedor" />
+          <TableColumn fx:id="TabelaColumnaCodigo" prefWidth="46.666685700416565" text="Codigo" />
+          <TableColumn fx:id="TabelaColumnaNomeProduto" prefWidth="109.33330917358398" text="Nome do Produto " />
+            <TableColumn fx:id="TabelaColumnData" prefWidth="100.66664123535156" text="Data da Compra" />
+            <TableColumn fx:id="TabelaColumnaTipo" prefWidth="61.33326721191406" text="Tipo" />
+            <TableColumn fx:id="TabelaColumnaValorVendido" prefWidth="88.0" text="Valor Vendido" />
+            <TableColumn fx:id="TabelaColumnaValorComprado" prefWidth="97.333251953125" text="Valor Comprado" />
+            <TableColumn fx:id="TabelaColumnTempoEstoque" prefWidth="119.3333740234375" text="Tempo no Estoque" />
+            <TableColumn fx:id="TabelaColumnaQuantidade" prefWidth="84.66665649414062" text="Quantidade" />
         </columns>
          <VBox.margin>
             <Insets top="50.0" />

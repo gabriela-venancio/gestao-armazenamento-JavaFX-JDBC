@@ -3,7 +3,9 @@ package gui;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.function.Consumer;
 
+import MOCK.EstoqueMOCK;
 import alerts.Alertas;
 import application.Main;
 import javafx.fxml.FXML;
@@ -32,12 +34,12 @@ public class TelaPrincipalController implements Initializable {
 		
 	@FXML
 	private void onbtCadastrarVenda() {
-		carregaTela("/gui/CadastrarVendaView.fxml");
+		carregaTela("/gui/CadastrarVendaView.fxml", x -> {});
 	}
 	
 	@FXML
 	private void onbtListaVendaAction() {
-		carregaTela("/gui/ListaVendas.fxml");
+		carregaTela("/gui/ListaVendas.fxml", x -> {});
 	}
 	
 		
@@ -48,12 +50,12 @@ public class TelaPrincipalController implements Initializable {
 	private MenuItem menuItemBuscarProdutos;
 	@FXML
 	private void onbtCadastrarProdutoAction() {
-		carregaTela("/gui/CadastrarProduto.fxml");
+		carregaTela("/gui/CadastrarProduto.fxml", x -> {});
 	}
 	
 	@FXML
 	private void onbtListaProdutoAction() {
-		carregaTela("/gui/ListaProduto.fxml");
+		carregaTela("/gui/ListaProduto.fxml", x -> {});
 	}
 	
 	
@@ -65,28 +67,36 @@ public class TelaPrincipalController implements Initializable {
 	
 	@FXML
 	private void onbtCadastrarFornecedor() {
-		carregaTela("/gui/CadastrarFornecedor.fxml");
+		carregaTela("/gui/CadastrarFornecedor.fxml", x -> {});
 	}
 	
 	@FXML
 	private void onbtListaFornecedorAction() {
-		carregaTela("/gui/ListaFornecedor.fxml");
+		carregaTela("/gui/ListaFornecedor.fxml", x -> {});
 	}
 	
 	
 	@FXML
 	private MenuItem menuItemCadastrarEstoque;
 	
-	@FXML
+	@FXML 
 	private MenuItem menuItemBuscarEstoque;
 	@FXML
 	private void onbtCadastrarEstoqueAction() {
-		carregaTela("/gui/CadastrarEstoque.fxml");
+		carregaTela("/gui/CadastrarEstoque.fxml",  x -> {});
 	}
 	
 	@FXML
 	private void onbtListaEstoqueAction() {
-		carregaTela("/gui/ListaEstoque.fxml");
+		carregaTela("/gui/ListaEstoque.fxml", (ListaEstoqueController controller)->{ 
+			controller.setListarEstoque(new EstoqueMOCK());
+			try {
+				controller.updateTableView();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		});
 	}
 	
 
@@ -124,7 +134,7 @@ public class TelaPrincipalController implements Initializable {
 	private Button btCancelarVenda;
 	
 	
-	private synchronized void carregaTela (String tela) {
+	private synchronized <T> void carregaTela (String tela, Consumer <T> inicializaAcao)  {
 	
 		try {		
 			FXMLLoader carregar = new FXMLLoader(getClass().getResource(tela));
@@ -139,9 +149,15 @@ public class TelaPrincipalController implements Initializable {
 			mainVBox.getChildren().add(mainMenu);
 			mainVBox.getChildren().addAll(nvbox.getChildren());
 			
+			T controller = carregar.getController();
+			inicializaAcao.accept(controller);
+			
 		} catch (IOException e) {
 			Alertas.showAlert("IO","Error", e.getMessage(), AlertType.ERROR);
 			e.printStackTrace();
-		}
-	}
-}
+		}}}
+	
+	
+			
+	
+	

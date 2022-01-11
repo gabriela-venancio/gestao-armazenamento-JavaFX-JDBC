@@ -1,17 +1,19 @@
 package Modal.entitys;
 
+import java.util.List;
+
 public class Estoque {
 
-	int codigo;
+	Integer codigo;
 	String nomeProduto;
 	String data;
-	int tipo;
+	Integer tipo;
 	double valorVendido;
 	double valorComprado;
 	String tempoEstoque;
-	int quantidade;
-	public Estoque(int codigo, String nomeProduto, String data, int tipo, double valorVendido, double valorComprado,
-			String tempoEstoque, int quantidade) {
+	Integer quantidade;
+	public Estoque(Integer codigo, String nomeProduto, String data, Integer tipo, double valorVendido, double valorComprado,
+			String tempoEstoque, Integer quantidade) {
 		super();
 		this.codigo = codigo;
 		this.nomeProduto = nomeProduto;
@@ -22,7 +24,7 @@ public class Estoque {
 		this.tempoEstoque = tempoEstoque;
 		this.quantidade = quantidade;
 	}
-	public int getCodigo() {
+	public Integer getCodigo() {
 		return codigo;
 	}
 	public void setCodigo(int codigo) {
@@ -70,6 +72,7 @@ public class Estoque {
 	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
 	}
+	
 	
 	
 	
