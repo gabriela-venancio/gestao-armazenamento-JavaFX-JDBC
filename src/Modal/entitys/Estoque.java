@@ -8,11 +8,11 @@ public class Estoque {
 	String nomeProduto;
 	String data;
 	Integer tipo;
-	double valorVendido;
-	double valorComprado;
+	String valorVendido;
+	String valorComprado;
 	String tempoEstoque;
 	Integer quantidade;
-	public Estoque(Integer codigo, String nomeProduto, String data, Integer tipo, double valorVendido, double valorComprado,
+	public Estoque(Integer codigo, String nomeProduto, String data, Integer tipo, String valorVendido, String valorComprado,
 			String tempoEstoque, Integer quantidade) {
 		super();
 		this.codigo = codigo;
@@ -23,6 +23,9 @@ public class Estoque {
 		this.valorComprado = valorComprado;
 		this.tempoEstoque = tempoEstoque;
 		this.quantidade = quantidade;
+	}
+	public Estoque() {
+		// TODO Auto-generated constructor stub
 	}
 	public Integer getCodigo() {
 		return codigo;
@@ -48,17 +51,17 @@ public class Estoque {
 	public void setTipo(int tipo) {
 		this.tipo = tipo;
 	}
-	public double getValorVendido() {
+	public String getValorVendido() {
 		return valorVendido;
 	}
-	public void setValorVendido(double valorVendido) {
+	public void setValorVendido(String valorVendido) {
 		this.valorVendido = valorVendido;
 	}
-	public double getValorComprado() {
+	public String getValorComprado() {
 		return valorComprado;
 	}
-	public void setValorComprado(double valorComprado) {
-		this.valorComprado = valorComprado;
+	public void setValorComprado(String string) {
+		this.valorComprado = string;
 	}
 	public String getTempoEstoque() {
 		return tempoEstoque;

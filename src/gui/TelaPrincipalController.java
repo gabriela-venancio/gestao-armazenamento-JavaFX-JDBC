@@ -135,7 +135,7 @@ public class TelaPrincipalController implements Initializable {
 	
 	
 	private synchronized <T> void carregaTela (String tela, Consumer <T> inicializaAcao)  {
-	
+	 
 		try {		
 			FXMLLoader carregar = new FXMLLoader(getClass().getResource(tela));
 

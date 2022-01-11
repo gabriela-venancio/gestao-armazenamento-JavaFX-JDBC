@@ -17,36 +17,14 @@
          <children>
             <MenuBar>
               <menus>
-                <Menu mnemonicParsing="false" text="Vendas">
-                  <items>
-                    <MenuItem fx:id="menuItemCadastrarVendas" mnemonicParsing="false" onAction="#onbtCadastrarVenda" text="cadastrar vendas" />
-                        <MenuItem fx:id="menuItemBuscarVendas" mnemonicParsing="false" onAction="#onbtListaVendaAction" text="buscar vendas" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Produtos">
-                  <items>
-                        <MenuItem fx:id="menuItemBuscarProdutos" mnemonicParsing="false" onAction="#onbtListaProdutoAction" text="buscar produtos" />
-                        <MenuItem fx:id="menuItemCadastrarProdutos" mnemonicParsing="false" onAction="#onbtCadastrarProdutoAction" text="CadastrarProduto" />
-                  </items>
-                </Menu>
+                <Menu fx:id="menuItemBuscarVendas" mnemonicParsing="false" onAction="#onbtListaVendaAction" text="Vendas" />
+                <Menu fx:id="menuItemBuscarProdutos" mnemonicParsing="false" onAction="#onbtListaProdutoAction" text="Produtos" />
                 <Menu mnemonicParsing="false" text="Estoque">
-                  <items>
-                    <MenuItem fx:id="menuItemCadastrarEstoque" mnemonicParsing="false" onAction="#onbtCadastrarEstoqueAction" text="cadastrar itens no estoque" />
-                        <MenuItem fx:id="menuItemBuscarEstoque" mnemonicParsing="false" onAction="#onbtListaEstoqueAction" text="buscar itens no estoque" />
-                  </items>
-                </Menu>
-                  <Menu mnemonicParsing="false" text="Fornecedores">
-                    <items>
-                      <MenuItem fx:id="menuItemCadastrarForncedores" mnemonicParsing="false" onAction="#onbtCadastrarFornecedor" text="cadastrar fornecedor" />
-                        <MenuItem fx:id="menuItemBuscarFornecedores" mnemonicParsing="false" onAction="#onbtListaFornecedorAction" text="buscar fornecedor" />
-                    </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Agenda de Compromisso">
-                    <items>
-                      <MenuItem fx:id="menuItemAgendarEvento" mnemonicParsing="false" text="agendar evento" />
-                        <MenuItem fx:id="menuItemVisualizarEvento" mnemonicParsing="false" text="visualizar eventos" />
-                    </items>
-                  </Menu>
+                     <items>
+                        <MenuItem fx:id="menuItemBuscarEstoque" mnemonicParsing="false" onAction="#onbtListaEstoqueAction" text="buscar" />
+                     </items></Menu>
+                  <Menu fx:id="menuItemBuscarFornecedores" mnemonicParsing="false" onAction="#onbtListaFornecedorAction" text="Fornecedores" />
+                  <Menu fx:id="menuItemVisualizarEvento" mnemonicParsing="false" text="Agenda de Compromisso" />
                   <Menu mnemonicParsing="false" text="Relatorios">
                     <items>
                         <MenuItem fx:id="menuItemRelatorioVendas" mnemonicParsing="false" text="relatorio de vendas" />

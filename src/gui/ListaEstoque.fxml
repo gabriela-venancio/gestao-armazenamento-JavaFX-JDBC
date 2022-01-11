@@ -19,9 +19,17 @@
             <Font name="Bookshelf Symbol 7" size="22.0" />
          </font>
          <VBox.margin>
-            <Insets bottom="10.0" left="200.0" top="10.0" />
+            <Insets bottom="40.0" left="400.0" top="30.0" />
          </VBox.margin>
       </Label>
+      <ToolBar prefHeight="40.0" prefWidth="200.0">
+         <items>
+            <Button fx:id="btSalvarItem" mnemonicParsing="false" onAction="#onbtSalvarAction" prefHeight="30.0" text="Cadastrar novo Item" />
+         </items>
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </ToolBar>
       <ToolBar prefHeight="40.0" prefWidth="200.0">
          <items>
             <MenuButton mnemonicParsing="false" prefHeight="10.0" text="Filtrar por:">

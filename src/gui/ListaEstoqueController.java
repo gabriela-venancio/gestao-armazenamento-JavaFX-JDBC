@@ -1,26 +1,39 @@
 package gui;
 
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
 import MOCK.EstoqueMOCK;
 import Modal.entitys.Estoque;
+import alerts.Alertas;
 import application.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.Pane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class ListaEstoqueController implements Initializable {
 
+	@FXML
+	private Button btSalvarItem;
+	@FXML
+	private void onbtSalvarAction(ActionEvent event) {
+		Stage estadoAtual = EstadoAtual.estadoAtual(event);
+		cadastrarItem(null, "/gui/CadastroEstoque.fxml", estadoAtual);
+		
+	}
 	
 	@FXML
 	private TableView<Estoque> tabelaListaEstoque;
@@ -88,4 +101,26 @@ public class ListaEstoqueController implements Initializable {
 
 
 	}
+	
+	private void cadastrarItem(Estoque tela, String estadoAtual, Stage pain) {
+		try {
+				FXMLLoader loader = new FXMLLoader(getClass().getResource(estadoAtual));
+				Pane painel = loader.load();
+				
+				CadastroEstoqueController controller = loader.getController();
+				controller.setEstoque(tela);
+				
+				
+			
+				Stage estadoDialogo= new Stage();
+				estadoDialogo.setTitle("cadastro de Item");
+				estadoDialogo.setScene(new Scene(painel));
+				estadoDialogo.initOwner(pain);
+				estadoDialogo.initModality(Modality.WINDOW_MODAL);
+				estadoDialogo.showAndWait();
+		}
+		catch(Exception e) {
+			Alertas.showAlert("IOEXception",null,e.getMessage(),AlertType.ERROR);
+		
+	}}
 }
